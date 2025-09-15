@@ -2,7 +2,7 @@ import multer from "multer";
 import fs from "fs";
 import type { Request } from "express";
 
-const upload = ({ uploadPath = "src/uploads", fileTypes = /jpeg|jpg|png|gif|bmp|webp/, maxFileSize = 2 * 1024 * 1024 }) => {
+const upload = ({ uploadPath = "uploads", fileTypes = /jpeg|jpg|png|gif|bmp|webp/, maxFileSize = 2 * 1024 * 1024 }) => {
 
   if (!fs.existsSync(uploadPath)) {
     fs.mkdirSync(uploadPath, { recursive: true });

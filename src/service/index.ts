@@ -86,7 +86,7 @@ export async function update(id: number, body: Partial<InfluencerBody>) {
   }
 
   if (data.image) {
-    fs.unlinkSync(`src/uploads/${existing.image}`)
+    fs.unlinkSync(`uploads/${existing.image}`)
   }
 
   return await prisma.influencer.update({
@@ -108,7 +108,7 @@ export async function destroy(id: number) {
     where: { id }
   })
 
-  fs.unlinkSync(`src/uploads/${data.image}`)
+  fs.unlinkSync(`uploads/${data.image}`)
 
   return data
 }
