@@ -1,34 +1,9 @@
 version: "3.9"
 services:
   app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: your-repo/dapbuz:latest
+    image: your-dockerhub-username/dapbuz:latest
     restart: always
     env_file:
       - .env
     ports:
       - "${PORT:-3210}:${PORT:-3210}"
-    depends_on:
-      - db
-    volumes:
-      - ./prisma:/app/prisma   # optional, hanya kalau butuh schema di host
-    environment:
-      # override here if needed, or rely on .env
-      DATABASE_URL: ${DATABASE_URL}
-      PORT: ${PORT}
-  # db:
-  #   image: postgres:15
-  #   restart: always
-  #   environment:
-  #     POSTGRES_USER: postgres
-  #     POSTGRES_PASSWORD: postgres
-  #     POSTGRES_DB: dapbuz
-  #   volumes:
-  #     - db-data:/var/lib/postgresql/data
-  #   ports:
-  #     - "5432:5432"
-
-volumes:
-  db-data:
