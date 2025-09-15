@@ -20,7 +20,7 @@ jobs:
 
       - name: Build and push image
         run: |
-          IMAGE=${{ secrets.DOCKERHUB_USERNAME }}/dapbuz:latest
+          IMAGE=${{ secrets.DOCKERHUB_USERNAME }}/dapur-buzzer:latest
           docker build -t $IMAGE .
           docker push $IMAGE
 
