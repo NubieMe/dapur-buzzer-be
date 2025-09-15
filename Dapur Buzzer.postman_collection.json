@@ -223,11 +223,11 @@
 	"variable": [
 		{
 			"key": "localURL",
-			"value": ""
+			"value": "localhost:3000"
 		},
 		{
 			"key": "prodURL",
-			"value": "",
+			"value": "http://3.106.220.128:3210",
 			"type": "default"
 		}
 	]
