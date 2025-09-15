@@ -1,0 +1,234 @@
+{
+	"info": {
+		"_postman_id": "4c4032e1-74c7-4448-a051-5279e66750c8",
+		"name": "Dapur Buzzer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44338315",
+		"_collection_link": "https://fahmi-5690107.postman.co/workspace/8810009c-a8d0-4284-84c7-57dbef5b17e6/collection/44338315-4c4032e1-74c7-4448-a051-5279e66750c8?action=share&source=collection_link&creator=44338315"
+	},
+	"item": [
+		{
+			"name": "Get All Influencers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{prodURL}}/api/influencer?page=1&limit=10",
+					"host": [
+						"{{prodURL}}"
+					],
+					"path": [
+						"api",
+						"influencer"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get One Influencer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{prodURL}}/api/influencer/1",
+					"host": [
+						"{{prodURL}}"
+					],
+					"path": [
+						"api",
+						"influencer",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Sylva Umari",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "sylvamulaichelaa",
+							"type": "text"
+						},
+						{
+							"key": "followers",
+							"value": "161000",
+							"type": "text"
+						},
+						{
+							"key": "recommended",
+							"value": "true",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/home/fahmi/koding/interview/dapbuz-fe/public/woman-in-brown-hijab-and-coat.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{prodURL}}/api/influencer",
+					"host": [
+						"{{prodURL}}"
+					],
+					"path": [
+						"api",
+						"influencer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Sylva Umami",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "sylvamulaichelaa",
+							"type": "text"
+						},
+						{
+							"key": "followers",
+							"value": "161000",
+							"type": "text"
+						},
+						{
+							"key": "recommended",
+							"value": "false",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/home/fahmi/koding/interview/dapbuz-fe/public/woman-in-brown-hijab-and-coat.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{prodURL}}/api/influencer/2",
+					"host": [
+						"{{prodURL}}"
+					],
+					"path": [
+						"api",
+						"influencer",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{prodURL}}/api/influencer/3",
+					"host": [
+						"{{prodURL}}"
+					],
+					"path": [
+						"api",
+						"influencer",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sniping ?",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{prodURL}}/api?key=rahasia&username=dapurbuzzer",
+					"host": [
+						"{{prodURL}}"
+					],
+					"path": [
+						"api"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "rahasia"
+						},
+						{
+							"key": "username",
+							"value": "dapurbuzzer"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "localURL",
+			"value": ""
+		},
+		{
+			"key": "prodURL",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
