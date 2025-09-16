@@ -24,6 +24,7 @@ COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/prisma ./prisma
 
 RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+RUN mkdir -p /app/uploads && chown -R appuser:appgroup /app/uploads
 USER appuser
 
 ARG PORT=3210
