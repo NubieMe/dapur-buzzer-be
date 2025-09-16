@@ -91,6 +91,9 @@ export async function create(req: Request, res: Response, next: NextFunction) {
 export async function update(req: Request, res: Response, next: NextFunction) {
   try {
     const { id } = req.params;
+    if (req.file) {
+      req.body.image = req.file.filename
+    }
 
     const numberId = Number(id);
     if (isNaN(numberId)) {
