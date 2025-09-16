@@ -1,7 +1,7 @@
 version: "3.9"
 services:
   app:
-    image: your-dockerhub-username/dapbuz:latest
+    image: nubieme/dapur-buzzer:latest
     restart: always
     env_file:
       - .env
